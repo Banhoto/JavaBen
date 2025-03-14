@@ -54,7 +54,7 @@
         }
 
         .hero-text {
-            max-width: 600px;
+            max-width: 1200px;
             padding: 20px;
             display: flex;
             flex-direction: row;
@@ -62,17 +62,30 @@
             gap: 60px;
         }
 
-        .banhoto-words {
+        .banhoto-words,
+        .banhoto-links {
             flex: 1;
             font-size: 1.1em;
             color: #ffeb3b;
             margin-top: 28px;
             background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
             padding: 20px; /* Внутренний отступ */
-            border: 2px solid #ffeb3b; /* Желтая рамка */
+            border: 2px solid #64009ed3; /* Желтая рамка */
             border-radius: 15px; /* Скругленные углы */
-            width: 20px; /* Фиксированная ширина для квадрата */
-            height: auto; /* Высота подстраивается под содержимое */
+            width: 300px; /* Фиксированная ширина для квадрата */
+            min-height: 200px; /* Минимальная высота для квадрата */
+        }
+
+        .banhoto-links a {
+            color: #ffeb3b;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .banhoto-links a:hover {
+            color: #fff;
+            text-decoration: underline;
         }
 
         .main-text {
@@ -138,12 +151,6 @@
             100% { opacity: 1; }
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-20px); }
-            60% { transform: translateY(-10px); }
-        }
-
         @media (max-width: 768px) {
             .hero-text h2 {
                 font-size: 2em;
@@ -152,9 +159,11 @@
                 flex-direction: column;
                 gap: 20px;
             }
-            .banhoto-words {
+            .banhoto-words,
+            .banhoto-links {
                 margin-top: 0;
                 width: 100%; /* На мобильных занимает всю ширину */
+                min-height: auto; /* Убираем фиксированную высоту для адаптивности */
             }
         }
     </style>
@@ -174,6 +183,14 @@
                 <div class="main-text">
                     <h2>Кто такой Banhoto?</h2>
                     <p>Banhoto — это не просто имя, это символ свободы, стиля и силы. Он появляется из ниоткуда, оставляя за собой след из ярких красок и невероятных историй. Никто не знает, откуда он пришел, но все знают, что он здесь, чтобы вдохновлять</p>
+                </div>
+                <div class="banhoto-links">
+                    <p>Мои контакты:</p>
+                    <a href="https://t.me/shovell42" target="_blank">@shovell42</a>
+                    <a href="https://t.me/PvPpolkovnik" target="_blank">@PvPpolkovnik</a>
+                    <a href="https://t.me/sqwez_EbAHKO" target="_blank">@sqwez_EbAHKO</a>
+                    <a href="https://t.me/Iloveskigr" target="_blank">@Iloveskigr</a>
+                    <a href="https://t.me/komarin00" target="_blank">@komarin00</a>
                 </div>
             </div>
         </section>
